@@ -1,0 +1,10 @@
+# Operator project artifacts
+*.swp
+*.swo
+*~
+.DS_Store
+
+# FRR runtime artifacts
+*.pid
+*.log
+*.vty

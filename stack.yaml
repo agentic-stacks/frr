@@ -1,0 +1,150 @@
+name: frr
+owner: agentic-stacks
+version: 0.1.0
+description: >
+  Teaches AI agents to deploy, configure, operate, troubleshoot, and develop
+  FRR (Free Range Routing). Covers all routing protocols (BGP, OSPF, IS-IS,
+  RIP, PIM, LDP, BFD, Babel, PBR, OpenFabric, VRRP, EIGRP, NHRP), multiple
+  deployment models (package, container, source), day-two operations, and
+  FRR codebase development.
+
+repository: https://github.com/agentic-stacks/frr
+
+target:
+  software: frr
+  versions:
+    - "10.x"
+    - "9.x"
+
+skills:
+  # Foundation
+  - name: architecture
+    entry: skills/foundation/architecture
+    description: FRR architecture — zebra, daemon model, IPC, routing table lifecycle
+  - name: configuration
+    entry: skills/foundation/configuration
+    description: vtysh, integrated config, config reload, daemons.conf
+  - name: daemons
+    entry: skills/foundation/daemons
+    description: Daemon roles, lifecycle, and zebra registration
+  # Deploy
+  - name: package
+    entry: skills/deploy/package
+    description: Install FRR from distro packages (apt, yum, dnf)
+  - name: container
+    entry: skills/deploy/container
+    description: Run FRR in Docker/Podman containers
+  - name: source
+    entry: skills/deploy/source
+    description: Build FRR from source with full dependencies
+  - name: initial-setup
+    entry: skills/deploy/initial-setup
+    description: Post-install daemon enablement, kernel params, interface setup
+  # Protocols
+  - name: bgp
+    entry: skills/protocols/bgp
+    description: BGP sessions, policies, communities, EVPN, route reflectors
+  - name: ospf
+    entry: skills/protocols/ospf
+    description: OSPFv2/v3 areas, stub/NSSA, authentication, graceful restart
+  - name: isis
+    entry: skills/protocols/isis
+    description: IS-IS levels, NET addressing, segment routing
+  - name: rip
+    entry: skills/protocols/rip
+    description: RIPv2/RIPng configuration and redistribution
+  - name: pim
+    entry: skills/protocols/pim
+    description: PIM-SM/SSM, RP config, IGMP, multicast routing
+  - name: ldp
+    entry: skills/protocols/ldp
+    description: LDP MPLS label distribution and targeted sessions
+  - name: bfd
+    entry: skills/protocols/bfd
+    description: BFD fast failure detection, protocol integration
+  - name: babel
+    entry: skills/protocols/babel
+    description: Babel mesh and wireless routing
+  - name: pbr
+    entry: skills/protocols/pbr
+    description: Policy-based routing rules and nexthop groups
+  - name: openfabric
+    entry: skills/protocols/openfabric
+    description: OpenFabric data center fabric routing
+  - name: vrrp
+    entry: skills/protocols/vrrp
+    description: VRRP virtual router redundancy
+  - name: eigrp
+    entry: skills/protocols/eigrp
+    description: EIGRP configuration (alpha status)
+  - name: nhrp
+    entry: skills/protocols/nhrp
+    description: NHRP and DMVPN hub-and-spoke (alpha status)
+  # Development
+  - name: codebase
+    entry: skills/development/codebase
+    description: FRR repo structure, key modules, coding style
+  - name: building
+    entry: skills/development/building
+    description: Build system, configure options, developer builds
+  - name: testing
+    entry: skills/development/testing
+    description: Unit tests, topotests, CI pipeline
+  - name: contributing
+    entry: skills/development/contributing
+    description: Contribution workflow, PR process, commit conventions
+  # Operations
+  - name: health-check
+    entry: skills/operations/health-check
+    description: Daemon status, neighbor state, route table verification
+  - name: upgrades
+    entry: skills/operations/upgrades
+    description: Version upgrade procedures, rollback, migration
+  - name: backup-restore
+    entry: skills/operations/backup-restore
+    description: Config backup, restore, disaster recovery
+  - name: monitoring
+    entry: skills/operations/monitoring
+    description: SNMP, BMP, logging, prometheus metrics
+  - name: performance
+    entry: skills/operations/performance
+    description: Route scale, convergence tuning, memory/CPU profiling
+  # Diagnose
+  - name: troubleshooting
+    entry: skills/diagnose/troubleshooting
+    description: Symptom-based decision trees for common FRR issues
+  - name: debugging
+    entry: skills/diagnose/debugging
+    description: FRR debug commands, log levels, packet captures
+  # Reference
+  - name: route-policy
+    entry: skills/reference/route-policy
+    description: Route maps, prefix lists, community lists, AS path ACLs
+  - name: known-issues
+    entry: skills/reference/known-issues
+    description: Per-version known bugs and workarounds
+  - name: compatibility
+    entry: skills/reference/compatibility
+    description: Kernel requirements, platform support, version matrix
+  - name: decision-guides
+    entry: skills/reference/decision-guides
+    description: Protocol selection and deployment model guidance
+
+project:
+  structure:
+    - frr.conf
+    - daemons
+    - vtysh.conf
+
+requires:
+  tools:
+    - name: vtysh
+      description: FRR integrated shell for configuration and show commands
+    - name: frr (systemd service)
+      description: FRR service management
+    - name: docker
+      description: Container runtime (optional, for container deployments)
+    - name: git
+      description: Version control (for development workflow)
+
+depends_on: []
