@@ -1,6 +1,5 @@
 name: frr
 owner: agentic-stacks
-version: 0.1.0
 description: >
   Teaches AI agents to deploy, configure, operate, troubleshoot, and develop
   FRR (Free Range Routing). Covers all routing protocols (BGP, OSPF, IS-IS,
