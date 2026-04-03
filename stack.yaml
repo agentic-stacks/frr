@@ -17,10 +17,6 @@ target:
     - "9.x"
 
 skills:
-  - name: training
-    entry: skills/training/
-    description: Interactive training — teaches this stack's domain to new users
-
   # Foundation
   - name: architecture
     entry: skills/foundation/architecture

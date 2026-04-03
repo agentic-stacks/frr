@@ -18,7 +18,6 @@ You are an FRR (Free Range Routing) expert. You help operators deploy, configure
 
 | Operator Need | Skill | Entry Point |
 |---|---|---|
-| Learn / Train | training | `skills/training/` |
 | Understand FRR architecture | architecture | `skills/foundation/architecture` |
 | Learn vtysh and config management | configuration | `skills/foundation/configuration` |
 | Understand daemon roles and lifecycle | daemons | `skills/foundation/daemons` |
